@@ -1,0 +1,161 @@
+
+<html>
+
+<head>
+
+    <title>Автозапчасти ГАЗ</title>
+
+    <link rel="stylesheet" href="secondary.css" />
+    <link rel="stylesheet" href="Triple.scss" />
+    <style>   
+        /*КОНТЕЙНЕР КНОПОК*/
+        .button-container {
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        /*КОД КНОПКИ*/
+        .readmore {
+            width: 170px;
+            height: 70px;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: "Josefin Sans", sans-serif;
+            background-color: #555555;
+            cursor: pointer;
+            box-shadow: 5px 5px 0 0;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 20px;
+            text-decoration: none;
+            color: #000;
+            position: relative;
+            margin: 0 10px;
+            overflow: hidden;
+        }
+
+        .readmore::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #FFF0F5, #F5F5F5);
+            opacity: 0;
+            transition: 0.3s;
+            z-index: -1;
+        }
+
+        .readmore:hover {
+            box-shadow: -5px -5px 0 0;
+            transform: scale(0.9);
+        }
+
+        .readmore:hover::after {
+            opacity: 1;
+        }
+
+        #centerwindow1 {
+            display: flex;
+            text-align: center;
+            padding: 10px;
+            justify-content: space-around;
+        }
+
+        #centermap {
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 10px;
+        }
+
+        .centered-block {
+            display: none;
+            position: fixed;
+            top: 25%;
+            font-family: "Josefin Sans", sans-serif;
+            margin-top: 10px;
+            margin-left: 19%;
+            margin-right: 20%;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: #222222;
+            color: aliceblue;
+            width: 61%;
+            /*height: 50%;*/
+            left: 10px;
+            border: 1px solid blue;
+            border-radius: 10px;
+            z-index: 9999;
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+    <div id="header">
+        <h1>Автозапчасти ГАЗ</h1>
+        <h2>Магазин автозапчастей и автотоваров в Раменском</h2>
+    </div>
+
+    <div id="leftside">
+        <h4>Контакты</h4>
+        <p>Телефон: +7 (499) 340-84-47</p>
+        <h4>Время работы:</h4>
+        <p>пн-пт 9:00-20:00</p>
+        <p>сб-вс 10:00-19:00</p>
+    </div>
+
+    <div id="rightside">
+        <h4>Наше местоположение:</h4>
+        <p>Московская обл.</p>
+        <p>Раменское</p>
+        <p>Транспортный пр-д</p>
+        <p>5б</p>
+    </div>
+
+    <div id="centside">
+        <h3>Продаем ЗАПЧАСТИ ГАЗ, ГАЗЕЛЬ.</h3>
+        <p>Новые. Оригинал, не оригинал. Большой ассортимент.</p>
+        <p>Аккумуляторы, масла, химия. Наличие на складе. Свой сервис.</p>
+        <p>Наши сотрудники являются настоящими экспертами в области подбора запчастей для автомобилей. Они готовы подобрать Вам запчасть в лучшем соотношении цена/качество.</p>
+        <p>///</p>
+        <p>///</p>
+        <p>///</p>
+        <p>///</p>
+        <p>///</p>
+        <p>///</p>
+        <p>///</p>
+        <div class="button-container">
+            <a href="#" class="readmore" onclick="openModal()">КАРТА</a>
+            <a href="#" class="readmore">Читать еще 2</a>
+            <a href="#" class="readmore">Читать еще 3</a>
+        </div>
+    </div>
+    <div id="footer">
+        <h2>Ждем Вас в нашем магазине!</h2>
+    </div>
+    <div class="centered-block" id="myModal">
+        <div id="centermap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d376.38469701436077!2d38.26489208497168!3d55.57138708923147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ac002a908a401%3A0x582218ef6b008ab9!2z0JDQstGC0L7RgtGA0LDQvdGB0LzQvtCx0LjQuw!5e0!3m2!1sru!2sde!4v1730486666727!5m2!1sru!2sde"
+                    width="100%"
+                    height="500px"
+                    style="border:0;" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div id="centerwindow1">
+            <a href="#" class="readmore" onclick="closeModal()">Закрыть</a>
+        </div>
+    </div>
+    <script src="Scripts.js"></script>
+</body>
+</html>
